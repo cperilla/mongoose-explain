@@ -33,7 +33,8 @@ module.exports = function(schema, pluginOptions) {
     });
   });
 
-  if (pluginOptions.aggregate !== false) {
+
+  if (pluginOptions && pluginOptions.aggregate !== false) {
     instrumentAggregate(schema, pluginOptions);
   }
 }
